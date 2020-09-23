@@ -1,0 +1,108 @@
+.login {
+  &__card {
+    max-width: 530px;
+    margin: 4rem auto;
+    background: #ffffff17;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+    padding: 3rem 0;
+    color: $primary-color;
+    position: relative;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      margin-bottom: $small-spacing;
+    }
+
+    input {
+      @include remove-default-styles;
+      border-bottom: 1px solid $primary-color;
+      padding: $big-spacing $small-spacing $medium-spacing;
+      width: $form-group-width;
+      font-family: $primary-font;
+      font-weight: $light-weight;
+      color: rgba(0,0,0,.65);
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    button {
+      @include remove-default-styles;
+      cursor: pointer;
+
+      &:focus {
+        @include remove-default-styles;
+      }
+    }
+
+    ::placeholder {
+      font-family: $primary-font;
+      font-weight: $light-weight;
+      color: rgba(0,0,0,.65);
+    }
+  }
+
+  &__error {
+    @include remove-default-styles;
+    height: 1.1rem;
+    font-family: $primary-font;
+    color: $grey-black;
+    background: transparent;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 600;
+    font-family: $primary-font;
+    color: $primary-color;
+  }
+
+  &__signup-btn {
+    font-family: $primary-font;
+    font-weight: $light-weight;
+    color: white;
+    background: $background-color;
+    padding: $small-spacing $medium-spacing;
+    width: $form-group-width;
+    margin: $big-spacing 0;
+
+    &:focus {
+      background-color: $grey-black;
+    }
+  }
+
+  &__media {
+    margin: 2rem 0;
+    width: $form-group-width;
+    display: flex;
+    justify-content: space-between;
+
+    .icon {
+      border: 1px solid $primary-color;
+      padding: $big-spacing;
+      border-radius: 2.5rem;
+      background: transparent;
+    }
+  }
+
+  &__switch-btn {
+    font-family: $primary-font;
+    background: $background-color;
+    color: white;
+    font-weight: $light-weight;
+    bottom: 0;
+    position: absolute;
+    padding: $small-spacing;
+
+    &:focus,
+    &:hover {
+      background: $primary-color;
+    }
+  }
+}
